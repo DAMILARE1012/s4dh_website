@@ -1,0 +1,129 @@
+.multi-item-carousel .carousel-inner>.item {
+    transition: 500ms ease-in-out left;
+}
+
+.multi-item-carousel .carousel-inner .active.left {
+    left: -33%;
+}
+
+.multi-item-carousel .carousel-inner .active.right {
+    left: 33%;
+}
+
+.multi-item-carousel .carousel-inner .next {
+    left: 33%;
+}
+
+.multi-item-carousel .carousel-inner .prev {
+    left: -33%;
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .multi-item-carousel .carousel-inner>.item {
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+        transform: none !important;
+    }
+}
+
+.multi-item-carousel .carouse-control.left,
+.multi-item-carousel .carouse-control.right {
+    background-image: none;
+}
+
+h1 {
+    color: white;
+    font-size: 2.25em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-shadow: 0px 2px 0px #000000;
+}
+
+
+/* Three columns side by side */
+
+.column {
+    float: left;
+    width: 20%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+
+/* Display the columns below each other instead of side by side on small screens */
+
+@media only screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        /* Black see-through */
+        color: #f1f1f1;
+        width: 92%;
+        transition: 0.5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 10px !important;
+        padding: 20px;
+        text-align: center;
+    }
+    .container:hover .overlay {
+        opacity: 1;
+    }
+    .overlay span {
+        font-size: 8px !important;
+    }
+}
+
+
+/* Add some shadows to create a card effect */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Some left and right padding inside the container */
+
+.container {
+    padding: 0 16px;
+}
+
+
+/* Clear floats */
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    color: #f1f1f1;
+    width: 92%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
