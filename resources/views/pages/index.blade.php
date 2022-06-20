@@ -82,11 +82,15 @@
                         </figure>
                     </div>
                 </div>
-                
+
                 <div class="col-md-5 col-sm-5">
                     <div class="about-info">
-                        <div class="wow fadeInUp text-center" data-wow-delay="0.8s">
-                            <img src="{{ asset('images/about-lasisi.jpg') }}" alt="">
+                        <div class="wow fadeInUp text-center" data-wow-delay="0.8s" style="margin-top: 80px;">
+                            {{-- <video width="520" height="300" controls>
+                                <source src="https://drive.google.com/file/d/1KDujIhL-urKBkJlC0YURfcKmln7lI6vA/preview" type="video/mp4" />
+                            </video> --}}
+                            <iframe src="https://drive.google.com/file/d/1KDujIhL-urKBkJlC0YURfcKmln7lI6vA/preview"
+                                width="520" height="300" allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
@@ -133,7 +137,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="item">
                                 <div class="col-xs-4"><a href="#1"><img
                                             src="{{ asset('images/teams/ubong_udoyen.jpg') }}" class="img-responsive"></a>
@@ -244,7 +248,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="item">
                                 <div class="col-xs-4"><a href="#1"><img src="{{ asset('images/teams/).jpg') }}"
                                             class="img-responsive"></a>
@@ -281,7 +285,7 @@
                     <!-- CONTACT FORM HERE -->
 
                     @if (session()->has('message'))
-                        <div x-data="{show: true}" x-init="setTimeout(() => show = false, 5000)" x-show="show">
+                        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 5000)" x-show="show">
                             <div class="alert alert-success" role="alert">
                                 <strong>Success</strong> {{ session()->get('message') }}
                             </div>
@@ -324,8 +328,7 @@
                                 </div>
 
                                 <label for="Message">Additional Message</label>
-                                <textarea class="form-control" rows="5" id="message" name="message"
-                                    placeholder="Message">{{ old('message') }}</textarea>
+                                <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message">{{ old('message') }}</textarea>
                                 <div>
                                     <span class="">{{ $errors->first('message') }}</span>
                                 </div>
